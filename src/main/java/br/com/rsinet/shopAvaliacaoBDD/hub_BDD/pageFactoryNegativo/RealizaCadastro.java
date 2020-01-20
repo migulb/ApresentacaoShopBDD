@@ -1,4 +1,4 @@
-package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory;
+package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.Select;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
 
-public class Cadastro {
+public class RealizaCadastro {
 
-	public Cadastro(WebDriver driver) {
+	public RealizaCadastro(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}
@@ -132,20 +132,20 @@ public class Cadastro {
 		btn_ConfirmaCadastro.click();
 	}
 
-	public void Detalhes_Cadastro() throws Exception {
+	public void Dados_Cadastro() throws Exception {
 		ExcelUtil.setExcelFile(Constante.Path_TestData + Constante.File_TestData, "Planilha1");
 
-		digitar_usuario(ExcelUtil.getCellData(1, Constante.Col_UserName));
-		digitar_email(ExcelUtil.getCellData(1, Constante.Col_email));
-		digitar_senha(ExcelUtil.getCellData(1, Constante.Col_senha));
-		confirmarSenha(ExcelUtil.getCellData(1, Constante.Col_confSenha));
-		primeiroNome(ExcelUtil.getCellData(1, Constante.Col_Nome));
-		ultimoNome(ExcelUtil.getCellData(1, Constante.Col_endName));
-		digitarTelefone(ExcelUtil.getCellData(1, Constante.Col_Tel));
-		digitar_cidade(ExcelUtil.getCellData(1, Constante.Col_cidade));
-		digitar_endereco(ExcelUtil.getCellData(1, Constante.Col_endereco));
-		digita_estado(ExcelUtil.getCellData(1, Constante.Col_estado));
-		digita_cep(ExcelUtil.getCellData(1, Constante.COl_cep));
+		digitar_usuario(ExcelUtil.getCellData(2, Constante.Col_UserName));
+		digitar_email(ExcelUtil.getCellData(2, Constante.Col_email));
+		digitar_senha(ExcelUtil.getCellData(2, Constante.Col_senha));
+		confirmarSenha(ExcelUtil.getCellData(2, Constante.Col_confSenha));
+		primeiroNome(ExcelUtil.getCellData(2, Constante.Col_Nome));
+		ultimoNome(ExcelUtil.getCellData(2, Constante.Col_endName));
+		digitarTelefone(ExcelUtil.getCellData(2, Constante.Col_Tel));
+		digitar_cidade(ExcelUtil.getCellData(2, Constante.Col_cidade));
+		digitar_endereco(ExcelUtil.getCellData(2, Constante.Col_endereco));
+		digita_estado(ExcelUtil.getCellData(2, Constante.Col_estado));
+		digita_cep(ExcelUtil.getCellData(2, Constante.COl_cep));
 	}
 
 }

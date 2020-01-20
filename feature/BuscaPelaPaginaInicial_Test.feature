@@ -28,5 +28,5 @@ Contexto: Acessar o site e abrir um Produto exposto na tela inicial
 	Cenário: Busca Pela Tela Inicial
 		Dado a abertura do site de Produto
 		E como usuario quero buscar um produto da tela inicial
-		E então ao finalizar o a procura encerrar o navegador
+		Então ao finalizar a procura encerrar o navegador
 

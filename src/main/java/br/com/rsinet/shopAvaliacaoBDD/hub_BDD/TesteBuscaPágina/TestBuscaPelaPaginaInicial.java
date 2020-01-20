@@ -6,6 +6,7 @@ import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory.CaminhoBuscaPaginaInic
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.AcoesDoNavegador;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Então;
 
 public class TestBuscaPelaPaginaInicial {
 
@@ -24,7 +25,7 @@ public class TestBuscaPelaPaginaInicial {
 
 	}
 
-	@E("então ao finalizar o a procura encerrar o navegador")
+	@Então("ao finalizar a procura encerrar o navegador")
 	public void então_ao_finalizar_o_a_procura_encerrar_o_navegador() {
 
 		AcoesDoNavegador.fecharDriver();

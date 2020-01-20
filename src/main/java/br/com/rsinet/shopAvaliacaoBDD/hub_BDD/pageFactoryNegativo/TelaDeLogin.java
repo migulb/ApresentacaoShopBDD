@@ -1,4 +1,4 @@
-package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory;
+package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -28,8 +28,4 @@ public class TelaDeLogin {
 		btn_cadastro.sendKeys(Keys.ENTER);
 	}
 
-	public void inicioCadastro() throws Exception {
-		apertarBotãoLogin();
-		apertarBotaoCadastro();
-	}
 }
