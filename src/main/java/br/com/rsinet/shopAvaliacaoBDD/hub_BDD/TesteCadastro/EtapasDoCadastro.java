@@ -49,11 +49,14 @@ public class EtapasDoCadastro {
 
 		Cadastro cadastro = new Cadastro(driver);
 		cadastro.confirmaCadastro();
+
 	}
 
 	@Então("fechar o site")
-	public void fechar_o_site() {
-		// AcoesDoNavegador.fecharDriver();
+	public void fechar_o_site() throws Exception {
+		Cadastro cadastro = new Cadastro(driver);
+		cadastro.assertCadastro();
+		AcoesDoNavegador.fecharDriver();
 	}
 
 }

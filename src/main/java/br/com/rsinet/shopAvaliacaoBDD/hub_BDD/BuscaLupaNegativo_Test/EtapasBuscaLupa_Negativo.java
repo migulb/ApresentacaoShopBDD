@@ -27,8 +27,10 @@ public class EtapasBuscaLupa_Negativo {
 	}
 
 	@Então("ao finalizar a procura encerrar o navegador")
-	public void ao_finalizar_a_procura_encerrar_o_navegador() {
+	public void ao_finalizar_a_procura_encerrar_o_navegador() throws Exception {
 
+		BuscaNaLupaNegativo asser = new BuscaNaLupaNegativo(driver);
+		asser.asserLupaNeg(driver);
 		AcoesDoNavegador.fecharDriver();
 	}
 

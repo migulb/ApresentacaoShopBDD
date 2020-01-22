@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
+import junit.framework.Assert;
 
 public class CaminhoBuscaPelaLupa {
 	public CaminhoBuscaPelaLupa(WebDriver driver) {
@@ -31,6 +32,9 @@ public class CaminhoBuscaPelaLupa {
 
 	@FindBy(how = How.XPATH, using = "//tool-tip-cart[@id='toolTipCart']//div//table//tfoot")
 	private WebElement btn_Cart;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\'checkOutButton\']")
+	private WebElement confCompra;
 
 	public void apertarLupa() throws InterruptedException {
 		btn_lupa.click();
@@ -62,11 +66,23 @@ public class CaminhoBuscaPelaLupa {
 		btn_Cart.click();
 	}
 
+	public void confirFinal() {
+
+		confCompra.click();
+	}
+
+	public void assertLupa(WebDriver driver) {
+		String url = driver.getCurrentUrl();
+		Assert.assertEquals(url,
+				"https://www.advantageonlineshopping.com/#/login?viewAll=HP%20Z4000%20WIRELESS%20MOUSE");
+	}
+
 	public void detalhesProcuraLupa() throws Exception {
 		ExcelUtil.setExcelFile(Constante.Path_TestData + Constante.File_TestData, "Planilha2");
 		escreverBarraDePesquisa(ExcelUtil.getCellData(1, Constante.Col_busca) + Keys.ENTER);
 		apertaNoMouse();
 		adicionaCarrinho();
 		vaiParaCart();
+		confirFinal();
 	}
 }

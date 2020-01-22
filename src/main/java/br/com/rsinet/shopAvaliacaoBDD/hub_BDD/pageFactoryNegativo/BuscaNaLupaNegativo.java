@@ -1,5 +1,6 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo;
 
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,9 @@ public class BuscaNaLupaNegativo {
 	@FindBy(how = How.XPATH, using = "//tool-tip-cart[@id='toolTipCart']//div//table//tfoot")
 	private WebElement btn_Cart;
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\"searchPage\"]/div[3]/div/label/span")
+	private WebElement erro;
+
 	public void apertarLupa() throws InterruptedException {
 		btn_lupa.click();
 	}
@@ -61,6 +65,16 @@ public class BuscaNaLupaNegativo {
 	public void vaiParaCart() {
 
 		btn_Cart.click();
+	}
+
+	public void asserLupaNeg(WebDriver driver) throws Exception {
+
+		String falha = erro.getText();
+		String error = driver.getPageSource();
+		System.out.println("Mensagem: " + falha);
+		// Assert.assertTrue("Produto não encontrado", falha.equals("No results for
+		// \"mesa\""));
+		Assert.assertEquals(falha, "No results for \"Mesa\"");
 	}
 
 	public void detalhesProcuraLupa() throws Exception {

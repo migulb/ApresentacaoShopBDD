@@ -28,6 +28,8 @@ public class TestBuscaPelaPaginaInicial {
 	@Então("ao finalizar a procura encerrar o navegador")
 	public void então_ao_finalizar_o_a_procura_encerrar_o_navegador() {
 
+		CaminhoBuscaPaginaInicial asser = new CaminhoBuscaPaginaInicial(driver);
+		asser.assertPaginaIni(driver);
 		AcoesDoNavegador.fecharDriver();
 	}
 

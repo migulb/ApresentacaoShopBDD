@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import junit.framework.Assert;
+
 public class CaminhoBuscaPaginaInicial {
 
 	public CaminhoBuscaPaginaInicial(WebDriver driver) {
@@ -25,6 +27,9 @@ public class CaminhoBuscaPaginaInicial {
 	@FindBy(how = How.XPATH, using = "//header//tfoot//td[2]")
 	private WebElement btn_cart;
 
+	@FindBy(how = How.XPATH, using = "//*[@id=\'checkOutButton\']")
+	private WebElement confCompra;
+
 	public void apertaNoProduto() {
 		btn_produto.click();
 	}
@@ -41,10 +46,21 @@ public class CaminhoBuscaPaginaInicial {
 		btn_cart.click();
 	}
 
+	public void confirFinal() {
+
+		confCompra.click();
+	}
+
+	public void assertPaginaIni(WebDriver driver) {
+		String html = driver.getPageSource();
+		Assert.assertTrue(html.contains("HP Z3600 WIRELESS MOUSE"));
+	}
+
 	public void detalhesBusca() {
 		apertaNoProduto();
 		apertanoMouse();
 		mandaParaOCarrinho();
 		carrinho();
+		confirFinal();
 	}
 }

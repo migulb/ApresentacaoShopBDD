@@ -1,4 +1,4 @@
-package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.BuscaLupaNegativo;
+package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.TesteNegativo;
 
 import org.junit.runner.RunWith;
 

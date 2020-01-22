@@ -36,7 +36,9 @@ public class EtapasBuscaPelaLupa {
 	@Então("finalizar o Navegador")
 	public void finalizar_o_Navegador() {
 
-		AcoesDoNavegador.fecharDriver();
+		CaminhoBuscaPelaLupa lupa = new CaminhoBuscaPelaLupa(driver);
+		lupa.assertLupa(driver);
+		// AcoesDoNavegador.fecharDriver();
 	}
 
 }

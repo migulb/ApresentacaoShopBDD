@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
+import junit.framework.Assert;
 
 public class Cadastro {
 
@@ -58,6 +59,9 @@ public class Cadastro {
 
 	@FindBy(how = How.ID, using = "register_btnundefined")
 	private WebElement btn_ConfirmaCadastro;
+
+	@FindBy(how = How.XPATH, using = "//span[@class='hi-user containMiniTitle ng-binding']")
+	private WebElement user;
 
 	public void digitar_usuario(String usuario) throws Exception {
 
@@ -130,6 +134,11 @@ public class Cadastro {
 	public void confirmaCadastro() {
 
 		btn_ConfirmaCadastro.click();
+	}
+
+	public void assertCadastro() throws Exception {
+		String test = user.getText();
+		Assert.assertTrue(test.contains(ExcelUtil.getCellData(1, Constante.Col_UserName)));
 	}
 
 	public void Detalhes_Cadastro() throws Exception {
