@@ -1,6 +1,5 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo;
 
-import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,13 +32,22 @@ public class BuscaTelaInicial_NegativoPF {
 
 	}
 
-	public void assertPagIni() throws InterruptedException {
-
-		String notDaPag = outroNot.getText();
-		String notInit = notInicial.getText();
-		System.out.println("Estou clicando em: " + notInit);
-		System.out.println("Fui encaminhado para a página do note" + notDaPag);
-		Assert.assertNotEquals(notInit, notDaPag);
-
+	public void clicaNoteInicial() {
+		String primeiroNote = notInicial.getText();
+		System.out.println("Estou clicando em: " + primeiroNote);
 	}
+
+	public void noteEncaminhado() {
+		String outroNote = outroNot.getText();
+		System.out.println("Fui encaminhado para: " + outroNote);
+	}
+
+	public WebElement getOutroNot() {
+		return outroNot;
+	}
+
+	public WebElement getNotInicial() {
+		return notInicial;
+	}
+
 }

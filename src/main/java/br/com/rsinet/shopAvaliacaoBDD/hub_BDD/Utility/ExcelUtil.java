@@ -60,7 +60,7 @@ public class ExcelUtil {
 
 			Row = ExcelWSheet.getRow(RowNum);
 
-			Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
+			// Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
 
 			if (Cell == null) {
 

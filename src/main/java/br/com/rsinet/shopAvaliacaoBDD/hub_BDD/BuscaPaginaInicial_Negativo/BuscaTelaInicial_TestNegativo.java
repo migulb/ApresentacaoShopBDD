@@ -1,18 +1,19 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.BuscaPaginaInicial_Negativo;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.AcoesDoNavegador;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.BuscaTelaInicial_NegativoPF;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.E;
+import cucumber.api.java.pt.Então;
 
 public class BuscaTelaInicial_TestNegativo {
 
 	WebDriver driver;
 
-	@Dado("a abertura do site inicial do ShopAdvance")
+	@Dado("a abertura do site inicial do Shop")
 	public void a_abertura_do_site_inicial_do_ShopAdvance() {
 
 		driver = AcoesDoNavegador.inicializarDriver();
@@ -23,15 +24,18 @@ public class BuscaTelaInicial_TestNegativo {
 			throws InterruptedException {
 
 		BuscaTelaInicial_NegativoPF busca = new BuscaTelaInicial_NegativoPF(driver);
+		String asser = busca.getNotInicial().getText();
+		busca.clicaNoteInicial();
 		busca.buscaNoot(driver);
+		String asse = busca.getOutroNot().getText();
+		busca.noteEncaminhado();
+		Assert.assertNotEquals(asser, asse);
 
 	}
 
 	@Então("o navegador e finalizado após a abertura do produto errado")
 	public void o_navegador_e_finalizado_após_a_abertura_do_produto_errado() throws InterruptedException {
-
-		// BuscaTelaInicial_NegativoPF asse = new BuscaTelaInicial_NegativoPF(driver);
-		// AcoesDoNavegador.fecharDriver();
+		AcoesDoNavegador.fecharDriver();
 	}
 
 }

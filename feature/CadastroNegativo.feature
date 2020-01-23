@@ -12,7 +12,7 @@ Contexto: acessar o site e cadastrar um usuario com senhas diferentes
   Eu como usuário vou cadastrar usuario com senhas diferentes
 
   Cenário: Cadastro de usuário
-    Dado a abertura do site
+    Dado a abertura do site principal do ShopAdvance
     E o menu do lado direito superior for acionado
     Quando deverá clicar em CREATE NEW ACCOUNT 
     E preencher os dados no site e senhas diferentes

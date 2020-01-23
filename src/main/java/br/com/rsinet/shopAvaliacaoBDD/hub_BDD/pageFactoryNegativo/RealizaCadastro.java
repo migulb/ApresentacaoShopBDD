@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
@@ -58,6 +59,9 @@ public class RealizaCadastro {
 
 	@FindBy(how = How.ID, using = "register_btnundefined")
 	private WebElement btn_ConfirmaCadastro;
+
+	@FindBy(how = How.XPATH, using = "//*[@id=\"formCover\"]/div[1]/div[2]/sec-view[2]/div/label")
+	private WebElement senhadiferente;
 
 	public void digitar_usuario(String usuario) throws Exception {
 
@@ -130,6 +134,12 @@ public class RealizaCadastro {
 	public void confirmaCadastro() {
 
 		btn_ConfirmaCadastro.click();
+	}
+
+	public void asserts(WebDriver driver) {
+
+		String valida = driver.getPageSource();
+		Assert.assertTrue(valida.contains("Passwords do not match"));
 	}
 
 	public void Dados_Cadastro() throws Exception {

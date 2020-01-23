@@ -1,5 +1,6 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory;
 
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,6 @@ import org.openqa.selenium.support.ui.Select;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
-import junit.framework.Assert;
 
 public class Cadastro {
 

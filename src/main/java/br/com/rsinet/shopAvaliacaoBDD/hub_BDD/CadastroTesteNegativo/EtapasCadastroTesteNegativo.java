@@ -5,16 +5,16 @@ import org.openqa.selenium.WebDriver;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.AcoesDoNavegador;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.RealizaCadastro;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.TelaDeLogin;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import cucumber.api.java.it.Quando;
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.E;
+import cucumber.api.java.pt.Então;
 
 public class EtapasCadastroTesteNegativo {
 
 	WebDriver driver;
 
-	@Dado("a abertura do site")
+	@Dado("a abertura do site principal do ShopAdvance")
 	public void a_abertura_do_site() {
 
 		driver = AcoesDoNavegador.inicializarDriver();
@@ -53,8 +53,9 @@ public class EtapasCadastroTesteNegativo {
 
 	@Então("fechar o site")
 	public void fechar_o_site() {
-
-		AcoesDoNavegador.fecharDriver();
+		RealizaCadastro asserts = new RealizaCadastro(driver);
+		asserts.asserts(driver);
+		// AcoesDoNavegador.fecharDriver();
 	}
 
 }

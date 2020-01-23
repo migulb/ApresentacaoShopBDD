@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.AcoesDoNavegador;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.BuscaNaLupaNegativo;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.E;
+import cucumber.api.java.pt.Então;
 
 public class EtapasBuscaLupa_Negativo {
 
