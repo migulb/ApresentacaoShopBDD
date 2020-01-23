@@ -11,9 +11,9 @@ import org.testng.Assert;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
 
-public class RealizaCadastro {
+public class RealizaCadastro_POF {
 
-	public RealizaCadastro(WebDriver driver) {
+	public RealizaCadastro_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}

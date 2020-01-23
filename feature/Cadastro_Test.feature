@@ -6,9 +6,8 @@
 Funcionalidade: Cadastro de usuário
 
 
-Contexto: acessar o site e realizar um cadastro
+Contexto: acessar o site SHOPAdvance e testar funcionalidades referente cadastro
 
-  Eu como usuário desejo realizar um cadastro
 
   Cenário: Cadastro de usuário
     Dado a abertura do site principal

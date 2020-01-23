@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.AcoesDoNavegador;
-import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.BuscaTelaInicial_NegativoPF;
+import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.BuscaTelaInicial_Negativo_POF;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
 import cucumber.api.java.pt.Então;
@@ -23,7 +23,7 @@ public class BuscaTelaInicial_TestNegativo {
 	public void o_usuario_clica_em_um_produto_especifico_mas_e_encaminhado_a_outro_produto()
 			throws InterruptedException {
 
-		BuscaTelaInicial_NegativoPF busca = new BuscaTelaInicial_NegativoPF(driver);
+		BuscaTelaInicial_Negativo_POF busca = new BuscaTelaInicial_Negativo_POF(driver);
 		String asser = busca.getNotInicial().getText();
 		busca.clicaNoteInicial();
 		busca.buscaNoot(driver);

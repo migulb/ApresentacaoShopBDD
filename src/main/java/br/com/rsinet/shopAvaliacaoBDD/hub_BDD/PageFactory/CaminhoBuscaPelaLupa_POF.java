@@ -11,8 +11,8 @@ import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
 import junit.framework.Assert;
 
-public class CaminhoBuscaPelaLupa {
-	public CaminhoBuscaPelaLupa(WebDriver driver) {
+public class CaminhoBuscaPelaLupa_POF {
+	public CaminhoBuscaPelaLupa_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 

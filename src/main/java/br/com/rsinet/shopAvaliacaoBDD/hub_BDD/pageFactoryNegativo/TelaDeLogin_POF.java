@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class TelaDeLogin {
+public class TelaDeLogin_POF {
 
-	public TelaDeLogin(WebDriver driver) {
+	public TelaDeLogin_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}

@@ -11,9 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
 
-public class BuscaNaLupaNegativo {
+public class BuscaNaLupaNegativo_POF {
 
-	public BuscaNaLupaNegativo(WebDriver driver) {
+	public BuscaNaLupaNegativo_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 

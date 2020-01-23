@@ -7,9 +7,8 @@
 Funcionalidade: Cadastrar usuario com senhas diferentes
 
 
-Contexto: acessar o site e cadastrar um usuario com senhas diferentes
+Contexto: acessar o site e testar funcionalidades de dados
 
-  Eu como usuário vou cadastrar usuario com senhas diferentes
 
   Cenário: Cadastro de usuário
     Dado a abertura do site principal do ShopAdvance

@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.Select;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.Constante;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
 
-public class Cadastro {
+public class Cadastro_POF {
 
-	public Cadastro(WebDriver driver) {
+	public Cadastro_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}
@@ -60,7 +60,7 @@ public class Cadastro {
 	@FindBy(how = How.ID, using = "register_btnundefined")
 	private WebElement btn_ConfirmaCadastro;
 
-	@FindBy(how = How.XPATH, using = "//span[@class='hi-user containMiniTitle ng-binding']")
+	@FindBy(how = How.XPATH, using = "//*[@id=\'menuUserLink\']/span")
 	private WebElement user;
 
 	public void digitar_usuario(String usuario) throws Exception {
@@ -136,8 +136,8 @@ public class Cadastro {
 		btn_ConfirmaCadastro.click();
 	}
 
-	public void assertCadastro() throws Exception {
-		String test = user.getText();
+	public void assertCadastro(WebDriver driver) throws Exception {
+		String test = driver.getPageSource();
 		Assert.assertTrue(test.contains(ExcelUtil.getCellData(1, Constante.Col_UserName)));
 	}
 

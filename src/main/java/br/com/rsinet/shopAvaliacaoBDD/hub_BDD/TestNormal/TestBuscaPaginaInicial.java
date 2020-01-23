@@ -1,4 +1,4 @@
-package br.com.rsinet.shopAvaliacaoBDD.hub_BDD;
+package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.TestNormal;
 
 import java.io.File;
 
@@ -12,8 +12,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Feature/Cadastro_Test.feature")
-public class TestCadastro {
+@CucumberOptions(features = "Feature/BuscaPelaPaginaInicial_Test.feature", glue = {
+		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.TesteBuscaPágina" }, tags = { "@BuscaPelaPaginaInicial" }, plugin = {
+				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/BuscaPagInicial.html" }, monochrome = true)
+public class TestBuscaPaginaInicial {
 
 	@AfterClass
 	public static void writeExtentReport() {

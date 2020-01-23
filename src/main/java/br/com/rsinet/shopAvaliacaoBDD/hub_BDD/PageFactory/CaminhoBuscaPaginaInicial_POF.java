@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import junit.framework.Assert;
 
-public class CaminhoBuscaPaginaInicial {
+public class CaminhoBuscaPaginaInicial_POF {
 
-	public CaminhoBuscaPaginaInicial(WebDriver driver) {
+	public CaminhoBuscaPaginaInicial_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}

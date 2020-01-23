@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class BuscaTelaInicial_NegativoPF {
+public class BuscaTelaInicial_Negativo_POF {
 
-	public BuscaTelaInicial_NegativoPF(WebDriver driver) {
+	public BuscaTelaInicial_Negativo_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 
