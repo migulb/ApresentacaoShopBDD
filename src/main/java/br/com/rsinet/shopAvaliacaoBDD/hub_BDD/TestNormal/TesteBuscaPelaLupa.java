@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 import com.cucumber.listener.Reporter;
 
-import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.FileReaderManager;
+import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Managers.FileReaderManager;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 

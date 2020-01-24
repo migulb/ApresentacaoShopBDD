@@ -2,7 +2,7 @@ package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.BuscaLupaNegativo_Test;
 
 import org.openqa.selenium.WebDriver;
 
-import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.AcoesDoNavegador;
+import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.TestContext;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo.BuscaNaLupaNegativo_POF;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.E;
@@ -11,27 +11,34 @@ import cucumber.api.java.pt.Então;
 public class EtapasBuscaLupa_Negativo {
 
 	WebDriver driver;
+	BuscaNaLupaNegativo_POF buscaLupa;
+	TestContext testContext;
+
+	public EtapasBuscaLupa_Negativo(TestContext context) {
+		testContext = context;
+		buscaLupa = testContext.getPageObjectManagerNegativo().getBuscaLupaNega();
+
+	}
 
 	@Dado("a abertura do site de Produto")
 	public void a_abertura_do_site_de_Produto() {
-
-		driver = AcoesDoNavegador.inicializarDriver();
+		driver = testContext.getWebDriverManager().getDriver();
 
 	}
 
 	@E("usuario busca um produto pela lupa que não existe")
 	public void usuario_busca_um_produto_pela_lupa_que_não_existe() throws Exception {
 
-		BuscaNaLupaNegativo_POF lupa = new BuscaNaLupaNegativo_POF(driver);
-		lupa.detalhesProcuraLupa();
+		// BuscaNaLupaNegativo_POF lupa = new BuscaNaLupaNegativo_POF(driver);
+		buscaLupa.detalhesProcuraLupa();
 	}
 
 	@Então("ao finalizar a procura encerrar o navegador")
 	public void ao_finalizar_a_procura_encerrar_o_navegador() throws Exception {
 
-		BuscaNaLupaNegativo_POF asser = new BuscaNaLupaNegativo_POF(driver);
-		asser.asserLupaNeg(driver);
-		AcoesDoNavegador.fecharDriver();
+		// BuscaNaLupaNegativo_POF asser = new BuscaNaLupaNegativo_POF(driver);
+		buscaLupa.asserLupaNeg(driver);
+		testContext.getWebDriverManager().fecharDriver();
 	}
 
 }

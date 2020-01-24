@@ -1,4 +1,4 @@
-package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility;
+package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Managers;
 
 import br.com.rsinet.shopAvaliacaoBDD.configuracoes.ConfigFileReader;
 

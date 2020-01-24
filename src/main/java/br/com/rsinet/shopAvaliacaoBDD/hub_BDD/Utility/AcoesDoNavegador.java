@@ -7,9 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AcoesDoNavegador {
 
-	private static WebDriver driver;
+	private WebDriver driver;
 
-	public static WebDriver inicializarDriver() {
+	private WebDriver inicializarDriver() {
 		if (driver == null) {
 			driver = new ChromeDriver();
 			driver.get(Constante.URL);
@@ -20,7 +20,13 @@ public class AcoesDoNavegador {
 		return driver;
 	}
 
-	public static void fecharDriver() {
+	public WebDriver getDriver() {
+		if (driver == null)
+			inicializarDriver();
+		return driver;
+	}
+
+	public void fecharDriver() {
 		if (driver != null)
 			driver.quit();
 		driver = null;
