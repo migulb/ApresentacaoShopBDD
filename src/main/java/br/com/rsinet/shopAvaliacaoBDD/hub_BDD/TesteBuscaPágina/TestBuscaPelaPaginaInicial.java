@@ -36,7 +36,7 @@ public class TestBuscaPelaPaginaInicial {
 	public void então_ao_finalizar_o_a_procura_encerrar_o_navegador() {
 		pagInit.assertPaginaIni(driver);
 
-		testContext.getWebDriverManager().fecharDriver();
+		// testContext.getWebDriverManager().fecharDriver();
 	}
 
 }

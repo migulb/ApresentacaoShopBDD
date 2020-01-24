@@ -1,5 +1,6 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -137,7 +138,8 @@ public class RealizaCadastro_POF {
 	}
 
 	public void asserts(WebDriver driver) {
-
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("scrollBy(0,-400)", "");
 		String valida = driver.getPageSource();
 		Assert.assertTrue(valida.contains("Passwords do not match"));
 	}

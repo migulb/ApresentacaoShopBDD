@@ -13,7 +13,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Feature/Cadastro_Test.feature", glue = {
-		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.TesteCadastro" }, tags = "@CadastroDeUsuario", plugin = {
+		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.TesteCadastro",
+		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility" }, tags = "@CadastroDeUsuario", plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/Cadastros.html" }, monochrome = true)
 public class TestCadastro {
 
