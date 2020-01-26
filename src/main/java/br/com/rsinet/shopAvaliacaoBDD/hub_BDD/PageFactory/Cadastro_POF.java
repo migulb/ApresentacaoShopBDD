@@ -1,6 +1,7 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -137,6 +138,8 @@ public class Cadastro_POF {
 	}
 
 	public void assertCadastro(WebDriver driver) throws Exception {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 4000);");
 		String test = driver.getPageSource();
 		Assert.assertTrue(test.contains(ExcelUtil.getCellData(1, Constante.Col_UserName)));
 	}

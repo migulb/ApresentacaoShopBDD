@@ -38,7 +38,7 @@ public class EtapasBuscaLupa_Negativo {
 
 		// BuscaNaLupaNegativo_POF asser = new BuscaNaLupaNegativo_POF(driver);
 		buscaLupa.asserLupaNeg(driver);
-		testContext.getWebDriverManager().fecharDriver();
+		// testContext.getWebDriverManager().fecharDriver();
 	}
 
 }

@@ -41,7 +41,7 @@ public class EtapasBuscaPelaLupa {
 	@Então("finalizar o Navegador")
 	public void finalizar_o_Navegador() {
 		lupa.assertLupa(driver);
-		testContext.getWebDriverManager().fecharDriver();
+		// testContext.getWebDriverManager().fecharDriver();
 	}
 
 }

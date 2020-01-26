@@ -44,7 +44,7 @@ public class BuscaTelaInicial_TestNegativo {
 
 	@Então("o navegador e finalizado após a abertura do produto errado")
 	public void o_navegador_e_finalizado_após_a_abertura_do_produto_errado() throws InterruptedException {
-		testContext.getWebDriverManager().fecharDriver();
+		// testContext.getWebDriverManager().fecharDriver();
 	}
 
 }

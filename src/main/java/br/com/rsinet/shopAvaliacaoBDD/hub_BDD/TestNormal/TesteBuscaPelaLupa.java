@@ -13,12 +13,16 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Feature/BuscaPelaLupa_Test.feature", glue = {
-		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.BuscaPelaLupa" }, tags = { "@BuscaPelaLupa" }, plugin = {
+		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.BuscaPelaLupa",
+		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility" }, tags = { "@BuscaPelaLupa" }, plugin = {
 				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/BuscaLupa.html" }, monochrome = true)
 public class TesteBuscaPelaLupa {
 
 	@AfterClass
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
+		Reporter.setSystemInfo("Miguel", System.getProperty("user.name"));
+		Reporter.setSystemInfo("SO", "Windows 10" + "64 Bit");
+		Reporter.setSystemInfo("Java Version", "1.8.0_151");
 	}
 }

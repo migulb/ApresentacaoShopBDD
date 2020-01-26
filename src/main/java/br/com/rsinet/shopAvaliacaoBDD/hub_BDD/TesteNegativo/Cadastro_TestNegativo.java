@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "Feature/CadastroNegativo.feature", glue = {
 		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.CadastroTesteNegativo",
 		"br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility" }, tags = { "@CadastroInvalido" }, plugin = {
-				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/Cadastros.html" }, monochrome = true)
+				"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/CadastrosTestNegativo.html" }, monochrome = true)
 public class Cadastro_TestNegativo {
 
 	@AfterClass
