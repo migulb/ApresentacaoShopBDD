@@ -1,6 +1,7 @@
 package br.com.rsinet.shopAvaliacaoBDD.hub_BDD.pageFactoryNegativo;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -70,11 +71,14 @@ public class BuscaNaLupaNegativo_POF {
 	public void asserLupaNeg(WebDriver driver) throws Exception {
 
 		String falha = erro.getText();
-		String error = driver.getPageSource();
+		// String error = driver.getPageSource();
 		System.out.println("Mensagem: " + falha);
 		// Assert.assertTrue("Produto não encontrado", falha.equals("No results for
 		// \"mesa\""));
 		Assert.assertEquals(falha, "No results for \"Mesa\"");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 2000);");
+
 	}
 
 	public void detalhesProcuraLupa() throws Exception {

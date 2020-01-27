@@ -14,11 +14,13 @@ import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.Utility.ExcelUtil;
 
 public class Cadastro_POF {
 
+	// inicializa as varias do FindBy da PageFactory//
 	public Cadastro_POF(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
 	}
 
+	// Variaveis recebendo a localizando de webElement da página//
 	@FindBy(how = How.NAME, using = "usernameRegisterPage")
 	private WebElement txtbx_Usuario;
 
@@ -137,6 +139,7 @@ public class Cadastro_POF {
 		btn_ConfirmaCadastro.click();
 	}
 
+	// Função de Assert//
 	public void assertCadastro(WebDriver driver) throws Exception {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeAsyncScript("window.setTimeout(arguments[arguments.length - 1], 4000);");
@@ -144,6 +147,7 @@ public class Cadastro_POF {
 		Assert.assertTrue(test.contains(ExcelUtil.getCellData(1, Constante.Col_UserName)));
 	}
 
+	// Função que realiza todo o cadastro//
 	public void Detalhes_Cadastro() throws Exception {
 		ExcelUtil.setExcelFile(Constante.Path_TestData + Constante.File_TestData, "Planilha1");
 

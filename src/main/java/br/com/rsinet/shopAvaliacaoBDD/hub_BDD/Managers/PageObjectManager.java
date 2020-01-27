@@ -7,6 +7,10 @@ import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory.CaminhoBuscaPaginaInic
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory.CaminhoBuscaPelaLupa_POF;
 import br.com.rsinet.shopAvaliacaoBDD.hub_BDD.PageFactory.TelaDeLogin_POF;
 
+/**
+ * Essa classe funciona como uma espécie de fábrica de instâncias, declarando as
+ * a cima e chamando as mesmas logo abaixo
+ */
 public class PageObjectManager {
 
 	private WebDriver driver;

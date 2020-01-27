@@ -56,7 +56,7 @@ public class EtapasDoCadastro {
 	@Então("^finalizar o navegador$")
 	public void finalizar_o_navegador() throws Throwable {
 		cadas.assertCadastro(driver);
-		testContext.getWebDriverManager().fecharDriver();
+		// testContext.getWebDriverManager().fecharDriver();
 	}
 
 }

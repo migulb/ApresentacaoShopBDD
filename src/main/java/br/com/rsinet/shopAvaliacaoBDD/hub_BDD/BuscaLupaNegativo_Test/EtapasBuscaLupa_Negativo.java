@@ -28,15 +28,12 @@ public class EtapasBuscaLupa_Negativo {
 
 	@E("usuario busca um produto pela lupa que não existe")
 	public void usuario_busca_um_produto_pela_lupa_que_não_existe() throws Exception {
-
-		// BuscaNaLupaNegativo_POF lupa = new BuscaNaLupaNegativo_POF(driver);
 		buscaLupa.detalhesProcuraLupa();
 	}
 
 	@Então("ao finalizar a procura encerrar o navegador")
 	public void ao_finalizar_a_procura_encerrar_o_navegador() throws Exception {
 
-		// BuscaNaLupaNegativo_POF asser = new BuscaNaLupaNegativo_POF(driver);
 		buscaLupa.asserLupaNeg(driver);
 		// testContext.getWebDriverManager().fecharDriver();
 	}
