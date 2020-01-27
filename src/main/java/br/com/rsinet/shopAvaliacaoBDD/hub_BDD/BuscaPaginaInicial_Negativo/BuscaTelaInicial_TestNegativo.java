@@ -30,8 +30,6 @@ public class BuscaTelaInicial_TestNegativo {
 	@E("o usuario clica em um produto especifico mas e encaminhado a outro produto")
 	public void o_usuario_clica_em_um_produto_especifico_mas_e_encaminhado_a_outro_produto()
 			throws InterruptedException {
-		// BuscaTelaInicial_Negativo_POF busca = new
-		// BuscaTelaInicial_Negativo_POF(driver);
 
 		String asser = telaInitNegativo.getNotInicial().getText();
 		telaInitNegativo.clicaNoteInicial();
